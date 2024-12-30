@@ -19,10 +19,9 @@ Bienvenue à la conférence sur le NLP et les Applications Génératives. Dans c
 Le NLP est un domaine de l'intelligence artificielle qui se concentre sur l'interaction entre les ordinateurs et les humains à travers le langage naturel. [En savoir plus sur le NLP](https://fr.wikipedia.org/wiki/Traitement_automatique_des_langues).
 
 ### Tokenization
-https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs
 La tokenization est le processus de division d'un texte en plus petites unités appelées tokens, comme des mots ou des phrases. 
 Nous utiliserons la librairie SpaCy.
-
+Vous pouvez accéder au notebook Colab en cliquant sur le lien suivant : [Ouvrir dans Colab](https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs)
 ### Les Expressions Régulières
 Les expressions régulières sont des séquences de caractères qui définissent un modèle de recherche. Elles sont utilisées pour trouver et manipuler des chaînes de texte.
 
