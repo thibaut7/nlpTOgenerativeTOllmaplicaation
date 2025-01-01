@@ -53,7 +53,7 @@ La lemmatisation est souvent utilisée dans des applications nécessitant une co
 - La traduction automatique
 - Les systèmes de recherche d'information
 
-Elle est préférée au stemming lorsque la précision est cruciale, car elle évite les problèmes de sur-réduction ou de perte de sens. Cependant, elle peut être plus complexe et exigeante en termes de calcul, car elle nécessite une connaissance contextuelle et l'utilisation de ressources comme des lexiques ou des bases de données linguistiques.
+Elle est préférée au stemming lorsque la précision est cruciale, car elle évite les problèmes de sur-réduction ou de perte de sens. Cependant, elle peut être plus complexe et exigeante en termes de calcul, car elle nécessite une connaissance contextuelle et l'utilisation de ressources comme des lexiques ou des bases de données linguistiques.\
 *spaCy supporte seulement la lemmatization. selon le créateur de spaCy Matt Honnibal dans issue #327 sur GitHub, stemmers sont rarement une bonne idée*.\
 Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs)\
 Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=HHAilAC3cXw&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=10)
