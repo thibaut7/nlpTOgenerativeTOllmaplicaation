@@ -27,13 +27,36 @@ Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-Yo
 Les expressions régulières sont des séquences de caractères qui définissent un modèle de recherche. Elles sont utilisées pour trouver et manipuler des chaînes de texte.
 
 ### Suppression des Mots Vides
-La suppression des mots vides consiste à éliminer les mots courants qui n'apportent pas de valeur significative à l'analyse, comme "et", "le", "la".
-
 ### Stemming
-Le stemming est le processus de réduction des mots à leur racine ou à leur forme de base.
+**Stemming** est une technique de traitement automatique du langage naturel (NLP) utilisée pour réduire les mots à leur forme de base ou racine. Elle supprime les flexions ou les affixes dérivationnels des mots, généralement en suivant un ensemble de règles simples ou d'algorithmes. L'objectif principal du stemming est de regrouper les mots ayant le même sens de base afin qu'ils puissent être traités comme équivalents lors de l'analyse de texte.
+
+#### Exemples :
+- **Running, runs, runner** → **Run**
+- **Studies, studying** → **Studi**
+
+Le stemming est souvent utilisé dans les moteurs de recherche, les systèmes de récupération d'informations et le text mining pour améliorer la performance des tâches telles que l'indexation de documents et la correspondance de mots-clés.
+
+Un algorithme de stemming populaire est le **Porter Stemmer**, qui applique une série de règles pour retirer les suffixes de manière itérative. Cependant, le stemming peut parfois entraîner une sur-réduction (par exemple, *"generalization"* → *"general"*) ou une perte de sens.
+
+Pour des résultats plus précis, on utilise souvent la **lemmatisation**, qui prend en compte le contexte et la grammaire du mot.
+
 
 ### Lemmatisation
-La lemmatisation est similaire au stemming, mais elle réduit les mots à leur forme de base ou à leur lemme en tenant compte du contexte.
+**Lemmatisation** est une technique de traitement automatique du langage naturel (NLP) qui consiste à ramener un mot à sa forme canonique ou **lemme**, en prenant en compte son contexte grammatical et son sens. Contrairement au stemming, qui applique des règles simples pour supprimer les suffixes, la lemmatisation utilise des dictionnaires et une analyse linguistique pour obtenir des résultats plus précis.
+
+#### Exemples :
+- **Running** → **Run** (verbe à l'infinitif)
+- **Better** → **Good** (adjectif au degré positif)
+
+La lemmatisation est souvent utilisée dans des applications nécessitant une compréhension linguistique plus fine, comme :
+- L'analyse de sentiments
+- La traduction automatique
+- Les systèmes de recherche d'information
+
+Elle est préférée au stemming lorsque la précision est cruciale, car elle évite les problèmes de sur-réduction ou de perte de sens. Cependant, elle peut être plus complexe et exigeante en termes de calcul, car elle nécessite une connaissance contextuelle et l'utilisation de ressources comme des lexiques ou des bases de données linguistiques.
+*spaCy supporte seulement la lemmatization. selon le créateur de spaCy Matt Honnibal dans issue #327 sur GitHub, stemmers sont rarement une bonne idée*.\
+Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs)\
+Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=HHAilAC3cXw&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=10)
 
 ## Modèles Génératifs
 Les modèles génératifs sont une classe de modèles d'apprentissage automatique qui génèrent de nouvelles instances de données. [En savoir plus sur les Modèles Génératifs](https://fr.wikipedia.org/wiki/Modèle_génératif).
