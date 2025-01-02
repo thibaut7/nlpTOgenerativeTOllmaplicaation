@@ -25,6 +25,63 @@ Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badg
 Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=_lR3RjvYvF4&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=8)
 ### Les Expressions Régulières
 Les expressions régulières sont des séquences de caractères qui définissent un modèle de recherche. Elles sont utilisées pour trouver et manipuler des chaînes de texte.
+#### Introduction aux Expressions Régulières
+
+##### Qu'est-ce qu'une Expression Régulière (Regex) ?
+
+Les Expressions Régulières (souvent abrégées en **regex**) sont des séquences de caractères qui définissent un modèle de recherche. Elles sont utilisées pour :
+
+- Faire correspondre des chaînes de texte.
+- Valider des entrées (par exemple, des adresses email, des numéros de téléphone).
+- Extraire des informations à partir de données structurées.
+- Remplacer ou modifier du texte basé sur des modèles.
+
+##### Pourquoi utiliser les Regex ?
+
+Les regex sont incroyablement puissantes pour :
+- Simplifier les manipulations complexes de chaînes de caractères.
+- Permettre une correspondance concise et flexible des modèles de texte.
+
+Exemples d'applications dans le monde réel :
+- Valider les entrées des utilisateurs (par exemple, vérifier si une adresse email est valide).
+- Rechercher et remplacer du texte dans des documents.
+- Analyser des données à partir de journaux ou de formats structurés comme JSON ou XML.
+
+---
+
+##### Exemple : Correspondance de Modèle Basique
+
+Voici un exemple en Python utilisant le module `re` pour une correspondance de modèle basique :
+
+```python
+import re
+
+# Définir un texte à rechercher
+texte = "Bonjour, je m'appelle ChatGPT !"
+
+# Rechercher un modèle
+correspondance = re.search(r"ChatGPT", texte)
+
+if correspondance:
+    print(f"Trouvé : {correspondance.group()}")  # Sortie : Trouvé : ChatGPT
+else:
+    print("Aucune correspondance trouvée.")
+```
+
+##### Explications :
+- `r"ChatGPT"` : Le `r` avant la chaîne garantit qu'elle est traitée comme une chaîne brute (évitant les problèmes avec les séquences d'échappement).
+- `re.search()` : Recherche la première occurrence du modèle dans le texte.
+- `correspondance.group()` : Renvoie le texte correspondant si une correspondance est trouvée.
+
+---
+
+##### Points Clés à Retenir
+- Les regex vous permettent de définir des modèles pour rechercher et manipuler du texte.
+- Le module `re` de Python est la bibliothèque de référence pour travailler avec les regex.
+- Commencez par des modèles simples et explorez progressivement des modèles plus complexes au fur et à mesure que vous gagnez en confiance.
+Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JPKER9-cidEqEtMfmiknNZ4_-l8RZvWC#scrollTo=fdoXPwaT1tt1)\
+Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=lK9gx4q_vfI&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=3)
+
 
 ### Suppression des Mots Vides
 ### Stemming
