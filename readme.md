@@ -78,7 +78,7 @@ else:
 ##### Points Clés à Retenir
 - Les regex vous permettent de définir des modèles pour rechercher et manipuler du texte.
 - Le module `re` de Python est la bibliothèque de référence pour travailler avec les regex.
-- Commencez par des modèles simples et explorez progressivement des modèles plus complexes au fur et à mesure que vous gagnez en confiance.
+- Commencez par des modèles simples et explorez progressivement des modèles plus complexes au fur et à mesure que vous gagnez en confiance.\
 Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JPKER9-cidEqEtMfmiknNZ4_-l8RZvWC#scrollTo=fdoXPwaT1tt1)\
 Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=lK9gx4q_vfI&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=3)
 
