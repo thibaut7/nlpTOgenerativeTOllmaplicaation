@@ -2,10 +2,10 @@
 
 ## Table des Matières
 1. [Introduction](#introduction)
-    1. NLP worklow
+    1. [NLP worklow](#NLP-worklow)
        - [Comprendre le problème](#Comprendre-le-problème)
        - [Comprendre et préparer la donnnée](#Comprendre-et-préparer-la-donnnée)
-       - [Tests rapides]
+       - [Approches de solution](#Approches-de-solution)
        - [Itération et amélioration du résultat](#Itération-et-amélioration-du-résultat)
        - [Evaluation et déploiement](#Evaluation-et-déploiement)
 2. [Traitement du Langage Naturel (NLP)](#traitement-du-langage-naturel-nlp)
@@ -14,13 +14,14 @@
    3. [Suppression des Mots Vides](#suppression-des-mots-vides)
    4. [Stemming](#stemming)
    5. [Lemmatisation](#lemmatisation)
-   6. [Part of Speech (classe grammaticale)] (#Part-of-Speech)
+   6. [Part of Speech-classe grammaticale](#Part-of-Speech)
 3. [Modèles Génératifs](#modèles-génératifs)
 4. [Applications](#applications)
 5. [Conclusion](#conclusion)
 
 ## Introduction
 Bienvenue à la conférence sur le NLP et les Applications Génératives. Dans cette conférence, nous couvrirons les bases du NLP, explorerons les modèles génératifs et discuterons de leurs applications.
+## NLP worklow
 ### Comprendre le problème
 Dans cette partie on essaie de répondre aux questions suivantes:
     - Quel est le principal problème? on n'essayera de Comprendre le problème de manière abstraite: les hypothèses et les attentes du projet
@@ -29,7 +30,7 @@ Dans cette partie on essaie de répondre aux questions suivantes:
 Comme nous allons travailler avec des données textuelles non structurées, cela peut necessité une nettoyage.
 C'est à dire remplacer les abbréviations, les acronymes, effacer les ponctuations...
 Une pratique répandue est de sélectionner un gold dataset(qui est la meilleure jeu de données disponible sous certaines conditions). L'obtention de ce jeu de données peut nécessité un nettoyage et etiquetage manuel.
-### 
+### Approches de solution
 Faire ressortir les types de combinaisons d'algorithme et de jeu de données qui marchent pour notre problème puis se concentrer sur eux et les étudier en profondeur.
 Tout cela te permettra d'estimer la quantité de travail à faire.
 ### Itération et amélioration du résultat
@@ -38,7 +39,6 @@ Ici on a déja selectionné les algorithmes, données et méthodes avec un résu
 L'évaluation et le déploiement sont essentiels pour rendre votre travail accessible et fiable. Une bonne évaluation garantit la confiance dans vos modèles, tandis que le déploiement permet leur utilisation pratique via des appels simples ou des API REST.
 
 #### Évaluation
-
 Un modèle avec 99 % de précision, comme dans le cas de la classification des tumeurs cérébrales, n'est pas forcément fiable. Si le modèle prédit que personne n'a de tumeur, il atteint une précision élevée simplement parce que les cas réels de tumeurs sont rares.  
 Pour une utilisation pratique, il est crucial de dépasser la précision et d'examiner la **matrice de confusion** pour identifier les erreurs. Comprendre ce que le modèle fait bien ou mal permet de l'améliorer.  
 Des techniques de visualisation, comme **t-SNE**, aident à comprendre le fonctionnement interne des modèles.  
