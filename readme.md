@@ -1,4 +1,4 @@
-# Conférence sur le NLP et les Applications Génératives
+# Natural Language Processing(Traitement du langage Naturel) et les Applications Génératives
 
 ## Table des Matières
 1. [Introduction](#introduction)
