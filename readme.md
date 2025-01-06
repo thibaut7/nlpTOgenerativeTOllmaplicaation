@@ -2,19 +2,50 @@
 
 ## Table des Matières
 1. [Introduction](#introduction)
+    1. NLP worklow
+       - [Comprendre le problème](#Comprendre-le-problème)
+       - [Comprendre et préparer la donnnée](#Comprendre-et-préparer-la-donnnée)
+       - [Tests rapides]
+       - [Itération et amélioration du résultat](#Itération-et-amélioration-du-résultat)
+       - [Evaluation et déploiement](#Evaluation-et-déploiement)
 2. [Traitement du Langage Naturel (NLP)](#traitement-du-langage-naturel-nlp)
    1. [Tokenization](#tokenization)
    2. [Les Expressions Régulières](#les-expressions-régulières)
    3. [Suppression des Mots Vides](#suppression-des-mots-vides)
    4. [Stemming](#stemming)
    5. [Lemmatisation](#lemmatisation)
+   6. [Part of Speech (classe grammaticale)] (#Part-of-Speech)
 3. [Modèles Génératifs](#modèles-génératifs)
 4. [Applications](#applications)
 5. [Conclusion](#conclusion)
 
 ## Introduction
 Bienvenue à la conférence sur le NLP et les Applications Génératives. Dans cette conférence, nous couvrirons les bases du NLP, explorerons les modèles génératifs et discuterons de leurs applications.
+### Comprendre le problème
+Dans cette partie on essaie de répondre aux questions suivantes:
+    - Quel est le principal problème? on n'essayera de Comprendre le problème de manière abstraite: les hypothèses et les attentes du projet
+    - Comment résoudre le problème: Faire une liste de d'idée qui sera utilisé comme plan 
+### Comprendre et préparer la donnnée
+Comme nous allons travailler avec des données textuelles non structurées, cela peut necessité une nettoyage.
+C'est à dire remplacer les abbréviations, les acronymes, effacer les ponctuations...
+Une pratique répandue est de sélectionner un gold dataset(qui est la meilleure jeu de données disponible sous certaines conditions). L'obtention de ce jeu de données peut nécessité un nettoyage et etiquetage manuel.
+### 
+Faire ressortir les types de combinaisons d'algorithme et de jeu de données qui marchent pour notre problème puis se concentrer sur eux et les étudier en profondeur.
+Tout cela te permettra d'estimer la quantité de travail à faire.
+### Itération et amélioration du résultat
+Ici on a déja selectionné les algorithmes, données et méthodes avec un résultat encourangeant.
+### Evaluation et déploiement
+L'évaluation et le déploiement sont essentiels pour rendre votre travail accessible et fiable. Une bonne évaluation garantit la confiance dans vos modèles, tandis que le déploiement permet leur utilisation pratique via des appels simples ou des API REST.
 
+#### Évaluation
+
+Un modèle avec 99 % de précision, comme dans le cas de la classification des tumeurs cérébrales, n'est pas forcément fiable. Si le modèle prédit que personne n'a de tumeur, il atteint une précision élevée simplement parce que les cas réels de tumeurs sont rares.  
+Pour une utilisation pratique, il est crucial de dépasser la précision et d'examiner la **matrice de confusion** pour identifier les erreurs. Comprendre ce que le modèle fait bien ou mal permet de l'améliorer.  
+Des techniques de visualisation, comme **t-SNE**, aident à comprendre le fonctionnement interne des modèles.  
+Dans des applications NLP continues (ex. : filtres anti-spam ou chatbots), une évaluation régulière est indispensable pour éviter la dégradation des performances.
+
+#### Déploiement
+Le model peut etre souvent déployer sous forme d'API REST.
 ## Traitement du Langage Naturel (NLP)
 Le NLP est un domaine de l'intelligence artificielle qui se concentre sur l'interaction entre les ordinateurs et les humains à travers le langage naturel. [En savoir plus sur le NLP](https://fr.wikipedia.org/wiki/Traitement_automatique_des_langues).
 
@@ -114,6 +145,82 @@ Elle est préférée au stemming lorsque la précision est cruciale, car elle é
 *spaCy supporte seulement la lemmatization. selon le créateur de spaCy Matt Honnibal dans issue #327 sur GitHub, stemmers sont rarement une bonne idée*.\
 Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs)\
 Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=HHAilAC3cXw&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=10)
+### Part of Speech
+Dans cette partie on essaie de voir les classes grammaticales des mots.
+
+#### Installation de SpaCy
+
+Installation de spaCy :
+
+```bash
+pip install spacy
+```
+
+Charger un modèle linguistique, par exemple le modèle pour le français :
+
+```bash
+python -m spacy download fr_core_news_sm
+```
+
+## Exemple de code pour identifier les POS
+
+Voici un script simple pour analyser les POS dans une phrase donnée :
+
+```python
+import spacy
+
+# Charger le modèle linguistique
+nlp = spacy.load("fr_core_news_sm")
+
+# Exemple de texte
+texte = "SpaCy est une bibliothèque incroyable pour les tâches de NLP."
+
+# Traitement du texte
+doc = nlp(texte)
+
+# Affichage des mots avec leurs POS
+print("Word\t\tPOS\t\tExplanation")
+print("-" * 30)
+for token in doc:
+    print(f"{token.text}\t\t{token.pos_}\t\t{spacy.explain(token.pos_)}")
+```
+
+## Résultat attendu
+
+Pour le texte donné, le script produit une sortie similaire à :
+
+```
+Word        POS        Explanation
+------------------------------
+SpaCy       PROPN      Proper noun
+est         AUX        Auxiliary verb
+une         DET        Determiner
+bibliothèque NOUN      Noun
+incroyable  ADJ        Adjective
+pour        ADP        Adposition
+les         DET        Determiner
+tâches      NOUN      Noun
+de          ADP        Adposition
+NLP         PROPN      Proper noun
+.           PUNCT      Punctuation
+```
+
+## Explication
+
+- **token.text** : Le mot ou le symbole dans le texte.
+- **token.pos_** : L'étiquette POS attribuée au mot.
+- **spacy.explain()** : Donne une explication claire de l'étiquette POS.
+
+## Exemples d'applications des POS
+
+L'analyse des **part of speech** a de nombreuses applications dans le NLP :
+
+1. **Analyse syntaxique** : Comprendre la structure grammaticale d'une phrase pour l'analyse syntaxique ou la création de parse trees.
+2. **Extraction d'entités nommées (NER)** : Identifier et catégoriser les entités importantes comme les noms propres, les lieux ou les organisations.
+3. **Classification de texte** : Utiliser les informations grammaticales pour améliorer la classification des documents ou des phrases.
+4. **Résumé automatique** : Identifier les éléments importants dans un texte, comme les verbes et les noms, pour générer un résumé.
+5. **Traduction automatique** : Améliorer la traduction en comprenant les rôles grammaticaux des mots dans une phrase.
+6. **Analyse des sentiments** : Étudier les adjectifs et adverbes pour mieux évaluer le ton émotionnel d'un texte.
 
 ## Modèles Génératifs
 Les modèles génératifs sont une classe de modèles d'apprentissage automatique qui génèrent de nouvelles instances de données. [En savoir plus sur les Modèles Génératifs](https://fr.wikipedia.org/wiki/Modèle_génératif).
