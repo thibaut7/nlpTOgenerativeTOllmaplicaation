@@ -145,9 +145,10 @@ Elle est préférée au stemming lorsque la précision est cruciale, car elle é
 *spaCy supporte seulement la lemmatization. selon le créateur de spaCy Matt Honnibal dans issue #327 sur GitHub, stemmers sont rarement une bonne idée*.\
 Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I6g9fNEL-RszTPupXUgCoZ0MAUK89oEH?authuser=1#scrollTo=_ZMRclVSFhVs)\
 Ressources Youtube: [![video YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/watch?v=HHAilAC3cXw&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=10)
-### Part of Speech
+### Entity Recongnization and Part of Speech
 Dans cette partie on essaie de voir les classes grammaticales des mots.
-
+#### Entity
+Lien colab: [![Ouvrir Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WlhmfGZEjnF1zhcF6-gUAJ3tL5pBlj4I?authuser=0#scrollTo=ZqeXPFELl9eK)\
 #### Installation de SpaCy
 
 Installation de spaCy :
