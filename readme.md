@@ -15,6 +15,7 @@
    4. [Stemming](#stemming)
    5. [Lemmatisation](#lemmatisation)
    6. [Part of Speech et NER(Named Entity Recognition)](#Part-of-Speech-and-NER)
+   7. [Representation de texte](#Text-representation)
 3. [Modèles Génératifs](#modèles-génératifs)
 4. [Applications](#applications)
 5. [Conclusion](#conclusion)
